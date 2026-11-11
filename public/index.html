@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Care | Skincare Routine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">Glow & Care 🌸</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#routine">My Routine</a>
+        <a href="#products">Products</a>
+        <a href="#tips">Tips</a>
+        <a href="#checklist">Checklist</a>
+    </nav>
+</header>
+<section class="hero" id="home">
+    <div class="hero-text">
+        <p class="tagline">YOUR SKIN, YOUR GLOW ✨</p>
+        <h1>Healthy Skin Starts With
+            <span>Self Care</span>
+        </h1>
+        <p>
+            Discover the perfect skincare routine for your skin type.
+            Take care of your skin and let your natural beauty shine.
+        </p>
+        <a href="#routine" class="btn">Explore Routine</a>
+    </div>
+    <div class="hero-image">
+        <img
+        src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800"
+        alt="Skincare products">
+    </div>
+</section>
+<!-- SKIN TYPE SELECTOR -->
+<section class="routine" id="routine">
+    <h2>Find Your Skin Routine 🌿</h2>
+    <p>Select your skin type to discover your personalized routine.</p>
+    <div class="selector">
+       <select id="skinType">
+    <option value="">Choose Your Skin Type</option>
+    <option value="oily">Oily Skin</option>
+    <option value="dry">Dry Skin</option>
+    <option value="combination">Combination Skin</option>
+    <option value="normal">Normal Skin</option>
+    <option value="sensitive">Sensitive Skin</option>
+</select>
+
+<button onclick="showRoutine()">Get My Routine</button>
+
+<div id="result"></div>
+
+<button onclick="viewHistory()">View My History</button>
+
+<div id="history"></div>
+    </div>
+</section>
+<!-- PRODUCTS SECTION -->
+<section class="products" id="products">
+    <h2>Skincare Essentials 🧴</h2>
+    <p>Some popular skincare products to explore.</p>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=500"
+            alt="Face cleanser">
+            <h3>Face Cleanser</h3>
+            <p>Gently cleanses your skin.</p>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=500"
+            alt="Face serum">
+            <h3>Face Serum</h3>
+            <p>Helps address specific skin concerns.</p>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500"
+            alt="Moisturizer">
+            <h3>Moisturizer</h3>
+            <p>Helps maintain skin hydration.</p>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500"
+            alt="Sunscreen">
+            <h3>Sunscreen</h3>
+            <p>Protects your skin from UV rays.</p>
+        </div>
+    </div>
+</section>
+<!-- DAILY TIPS -->
+<section class="tips" id="tips">
+    <h2>Daily Skincare Tips 🌷</h2>
+    <div class="tip-container">
+        <div class="tip-card">
+            <h3>💧 Stay Hydrated</h3>
+            <p>Keep your skin hydrated and drink enough water.</p>
+        </div>
+        <div class="tip-card">
+            <h3>☀️ Use Sunscreen</h3>
+            <p>Apply broad-spectrum SPF 30 or higher every morning.</p>
+        </div>
+        <div class="tip-card">
+            <h3>🧴 Cleanse Gently</h3>
+            <p>Use a gentle cleanser to remove dirt and impurities.</p>
+        </div>
+        <div class="tip-card">
+            <h3>🌙 Sleep Well</h3>
+            <p>Get enough sleep and maintain a healthy routine.</p>
+        </div>
+    </div>
+</section>
+<!-- DAILY CHECKLIST -->
+<section class="checklist" id="checklist">
+    <h2>My Daily Skincare Checklist 💚</h2>
+    <p>Tick the activities after completing your skincare routine.</p>
+    <div class="check-box">
+        <h3>☀️ Morning Routine</h3>
+        <label>
+            <input type="checkbox" class="task">
+            Cleanser
+        </label>
+        <label>
+            <input type="checkbox" class="task">
+            Serum (if needed)
+        </label>
+        <label>
+            <input type="checkbox" class="task">
+            Moisturizer
+        </label>
+        <label>
+            <input type="checkbox" class="task">
+            Sunscreen
+        </label>
+        <h3>🌙 Night Routine</h3>
+        <label>
+            <input type="checkbox" class="task">
+            Remove makeup / sunscreen
+        </label>
+        <label>
+            <input type="checkbox" class="task">
+            Cleanser
+        </label>
+        <label>
+            <input type="checkbox" class="task">
+            Night serum (if needed)
+        </label>
+        <label>
+            <input type="checkbox" class="task">
+            Moisturizer
+        </label>
+        <p id="progress">0 of 8 tasks completed</p>
+        <button onclick="resetChecklist()">Reset Checklist</button>
+    </div>
+</section>
+<!-- ABOUT -->
+<section class="about">
+    <h2>Love Your Skin ❤️</h2>
+    <p>
+        Every skin type is beautiful. The right skincare routine
+        helps maintain healthy skin. Be consistent, be gentle
+        and never forget to love yourself.
+    </p>
+</section>
+<section class="checklist" id="history-section">
+
+    <h2>My Saved Routines 💗</h2>
+
+    <p>View your previously selected skincare routines.</p>
+
+    <button onclick="viewHistory()">
+        View My History
+    </button>
+
+    <div id="history" class="result">
+        <p>Your saved routines will appear here.</p>
+    </div>
+</section>
+<footer>
+    <h3>Glow & Care 🌸</h3>
+    <p>Self Care is the Best Care.</p>
+    <p>© 2026 Glow & Care | Made with 💗</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
