@@ -53,22 +53,11 @@ glow-skincare/
 2. Open the project folder in Visual Studio Code.
 3. Open the terminal in VS Code.
 4. Install the required packages:
-
-```bash
 npm install
-```
-
 5. Start the server:
-
-```bash
 node server.js
-```
-
 6. Open your browser and visit:
-
-```text
 http://localhost:3000
-```
 
 ## 🔗 API Endpoints
 
