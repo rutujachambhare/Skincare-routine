@@ -57,8 +57,7 @@ npm install
 5. Start the server:
 node server.js
 6. Open your browser and visit:
-http://localhost:3000
-
+[Skincare](http://localhost:3000/)
 ## 🔗 API Endpoints
 
 | Method | Endpoint | Description |
