@@ -17,7 +17,6 @@ async function showRoutine() {
 
         // Get routine from backend
         const response = await fetch(`/api/routines/${skinType}`);
-
         if (!response.ok) {
             throw new Error("Routine not found");
         }
